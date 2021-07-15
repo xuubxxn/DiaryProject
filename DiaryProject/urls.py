@@ -23,7 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', d.home, name="home"),
     path('post/', d.post, name="post"),
-    path('detail/', d.detail, name="detail"),
-    path('delete/<str:id>', d.delete, name="delete"),
+    path('detail/<str:id>/', d.detail, name="detail"),
+    path('delete/<str:id>/', d.delete, name="delete"),
         
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

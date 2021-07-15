@@ -12,8 +12,8 @@ def home(request) :
     return render(request, 'home.html', {'diarys':page})
 
 def detail(request, id) :
-    diarys = get_object_or_404(Diary, pk=id)
-    return render(request, 'detail.html', {'diarys':diarys})
+    diary = get_object_or_404(Diary, pk=id)
+    return render(request, 'detail.html', {'diary':diary})
 
 def post(request) :
     if request.method == 'POST' :

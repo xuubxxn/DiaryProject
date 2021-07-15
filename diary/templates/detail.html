@@ -7,11 +7,12 @@
     <title>Home</title>
 </head>
 <body>
-    <h5>{{ d.title }}</h5>
-    <h5>{{ d.pub_date }}</h5>
-    <h5>{{ d.weather }}</h5>
-    <p><img src="{{ d.image.url }}" width="200px" height="200px" ></p>
+    <h5>{{ diary.title }}</h5>
+    <h5>{{ diary.pub_date }}</h5>
+    <h5>{{ diary.weather }}</h5>
+    {% if diary.image %}
+    <p><img src="{{ diary.image.url }}" width="200px" height="200px" ></p>
+    {% endif %}
     <p>{{ d.content }}</p>
-    
 </body>
 </html>

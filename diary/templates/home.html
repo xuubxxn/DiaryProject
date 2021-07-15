@@ -14,13 +14,13 @@
 
 
     {% for d in diarys %}
-    <h5>제목 : {{ d.title }}</h2>
-    <h5>날짜 : {{ d.pub_date }}</h5>
-    <h5>날씨 : {{ d.weather }}</h5>
     {% if d.image %}
     <p>사진 : <img src="{{ d.image.url }}" width="200px" height="200px"></p>
     {% endif %}
-    <p>내용 : {{ d.content }}</p>
+    <h5>제목 : {{ d.title }}</h2>
+    <a href="{% url 'detail' d.id %}">
+        <button>자세히 보기</button>
+    </a>
     {% endfor %}
 
     <div>
